@@ -2,5 +2,5 @@
 Team Members are
 Arshdeep Singh
 Dilpreet Singh
-Obaid Khan
+Obaid ur rehman khan
 Manpreet Kaur
