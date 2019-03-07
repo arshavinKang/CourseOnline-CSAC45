@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  background-image: url("img4.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #660000;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 40px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.active {
+  background-color: #660000;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+a:link, a:visited {
+  background-color: #660000;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+table, td {
+  border: 1px solid black;
+  float:none;
+}
+
+</style>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+<a href="file:///C:/Users/Lenovo/Desktop/project/main.html" class="fa fa-home"></a>
+  <a href="Aboutus" class="active">AboutUs</a>
+<a href="Aboutus" class="active">Course</a>
+<a href="Aboutus" class="active">StudentServices</a>
+<a href="file:///C:/Users/Lenovo/Desktop/project/ContactUS.html"target="_blank">Contact Us</a>
+  <a href="#about">LogOut</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</br>
+<div>
+<a href="file:///C:/Users/Lenovo/Desktop/project/addcat.html" target="_blank">Add Category</a>
+<center><p style="color:white"> category ID  Category Name </p></center>
+<center>
+<table bgcolor="#ffffff">
+  <tr>
+    <th>Course ID </th>
+    <th>Course Name</th>
+	<th>Category Name</th>
+    <th>Course Price</th>
+    <th>Seats Available</th>
+	
+  </tr>
+  
+  <tr>
+    <td>Id 1</td>
+    <td>web app</td>
+    <td>Category 1</td>
+    <td>6500</td>
+	<td>45</td>
+  </tr>
+  <tr>
+    <td>Id 2</td>
+    <td>java</td>
+	<td>Category 1</td>
+    <td>7500</td>
+	<td>40</td>
+  </tr>
+  <tr>
+    <td>Id 3</td>
+    <td>bussiness</td>
+	<td>Category 2</td>
+    <td>6000</td>
+	<td>50</td>
+  </tr>
+  <tr>
+    <td>Id 4</td>
+    <td>accounting</td>
+	<td>Category 2</td>
+    <td>6500</td>
+	<td>55</td>
+  </tr>
+</table>
+</center>
+<br>
+<center>
+<button  onclick="myCreateFunction()">Create Row</button>
+<button onclick="myDeleteFunction()">Delete Row</button>
+</center>
+</br>
+<script>
+function myCreateFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+}
+
+function myDeleteFunction() {
+  document.getElementById("myTable").deleteRow(0);
+}
+</script>
+
+ <center>
+<p style="color:white;">ADD PRODUCT</p><br>
+<p style="color:white;">Product Id:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="Product Id"  value=""><br><br>
+<b>Product Name: &nbsp &nbsp &nbsp  </b> <input type ="text" name="Product Name" value=""><br><br>
+<b>Category Name: </b> &nbsp &nbsp 
+<select>
+<option value="None">None &nbsp &nbsp </option>
+  <option value="IT">IT</option>
+  <option value="Business">bussiness &nbsp &nbsp </option>
+  <option value="Science">Science</option>
+  <option value="Maths">Maths</option>
+  </select>
+  <br><br>
+ <b>Sales Price: &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  </b> <input type ="number" name="4" value=""><br><br>
+ <b>Quantity: &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b> <input type ="number" name="5" value=""><br><br>
+<br><input type="submit" value="ADD">
+</center>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+</body>
+</html>
